@@ -17,7 +17,19 @@ describe 'calculator spec' do
     context 'integer and integer number test' do
         it 'adding two integer numbers' do
             c1 = Calculator.new(1,2)
-            expect(c1.add).to eq(3.2)
+            expect(c1.add).to eq(3)
+        end
+    end
+    context 'integer and string test' do
+        it 'adding integer with string' do
+            c1 = Calculator.new(1, "Hello")
+            expect(c1.add).to eq(false)
+        end
+    end
+    context 'string and string test' do
+        it 'adding string with string' do
+            c1 = Calculator.new("Oye", "Hello")
+            expect(c1.add).to eq(false)
         end
     end
 end
