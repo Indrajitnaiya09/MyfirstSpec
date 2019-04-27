@@ -11,4 +11,11 @@ class Calculator
             return false
         end
     end
+    def substract
+        if (@num1.class != String && @num2.class != String)
+            return(@num1 - @num2)
+        else
+            return false
+        end
+    end
 end
